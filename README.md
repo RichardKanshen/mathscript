@@ -6,13 +6,19 @@ this is originally a school project for maths class, and it is going to be far f
 thanks for understanding!
 
 ## how to use
-### method 1 - import in html <script>
+### method 1
+**import in html <script>**
+
 ```<script src="https://raw.githubusercontent.com/RichardKanshen/mathscript/script/mathscript.js"></script>```
 
 ---
-### method 2 - import in js as es6 module
+### method 2
+**import in js as es6 module**
+
 ```import * as MathScript from 'https://raw.githubusercontent.com/RichardKanshen/mathscript/script/mathscript.js';```
 
 ---
-### method 3 - import in js as commonjs module
+### method 3
+**import in js as commonjs module**
+
 ```const MathScript = require('https://raw.githubusercontent.com/RichardKanshen/mathscript/script/mathscript.js');```
