@@ -12,16 +12,18 @@ const MathScript = {
         let bracketsCount = 0;
     
         var result = input.valueOf()
-            .replaceAll(/([+\-*/=÷×])/g, operator => operators[operator] || operator) // Operators
+            .replaceAll("/", "÷").replaceAll("*", "×")
+            .replaceAll(/[a-z]/g, match => `<mi>${match}</mi>`)
+            .replaceAll(/([+\-=÷×])/g, operator => operators[operator] || operator)
             .replace(/[(]/g, () => {
                 bracketsCount++;
                 return '<mrow><mo>(</mo>';
-            }) // Opening Brackets
+            })
             .replace(/[)]/g, () => {
                 bracketsCount--;
                 return '<mo>)</mo></mrow>';
-            }) // Closing Brackets
-            .replace(/\d+(\.\d+)?/g, match => `<mn>${match}</mn>`); // Numbers
+            })
+            .replace(/\d+(\.\d+)?/g, match => `<mn>${match}</mn>`);
             
 
         
