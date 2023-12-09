@@ -14,6 +14,11 @@ const MathScript = {
         var result = input.valueOf()
             .replaceAll("/", "÷").replaceAll("*", "×")
             .replaceAll(/[a-z]/g, match => `<mi>${match}</mi>`)
+            .replaceAll("FRAC{", "<mfrac><mrow>") //   FRACTIONS
+            .replaceAll(":FRAC:", "</mrow><mrow>") //  FRACTIONS
+            .replaceAll("}FRAC", "</mrow></mfrac>") // FRACTIONS
+            .replaceAll(/ROOT{([^:]+):ROOT:([^}]+)}ROOT/g, '<mroot><mrow>$2</mrow><mrow>$1</mrow></mroot>') // ROOT EXPRESSIONS
+            .replaceAll(/POW{([^:]+):POW:([^}]+)}POW/g, '<msup><mi>$1</mi><mn>$2</mn></msup>') //              POWER EXPRESSIONS
             .replaceAll(/([+\-=÷×])/g, operator => operators[operator] || operator)
             .replace(/[(]/g, () => {
                 bracketsCount++;
