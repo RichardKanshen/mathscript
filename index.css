@@ -6,7 +6,7 @@
 
     input {
         background: #0f0f0f;
-        color: #f0f0f044;
+        color: #f0f0f0;
         border-color: white;
     }
 }
@@ -19,7 +19,7 @@
 
     input {
         background: #f0f0f0;
-        color: #0f0f0f44;
+        color: #0f0f0f;
         border-color: black;
     }
 }
