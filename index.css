@@ -102,3 +102,64 @@ mathcontainer {
     justify-content: center;
     font-size: 20px;
 }
+
+article {
+    display: flex;
+    width: 75%;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+
+    & heading {
+        font-size: 64px;
+    };
+    
+    & *:not(heading) {
+        font-weight: normal;
+    };
+    
+    & small {
+        font-size: x-small;
+        font-style: italic;
+        opacity: 50%;
+    };
+    
+    & hr:first-of-type {
+        width: 80%;
+    };
+    
+    & hr {
+        opacity: 75%;
+    };
+    
+    & hr:nth-of-type(2) {
+        width: 60%;
+    };
+    
+    & span {
+        text-align: center;
+    };
+    
+    & ul>* {
+        line-height: 2;
+    };
+    
+    & ul {
+        text-align: center;
+    };
+    
+    & kbd {
+        background: whitesmoke;
+        color: black;
+        min-width: 19px;
+        height: 18px;
+        display: inline-block;
+        line-height: 1.1;
+        font-weight: bold;
+        font-family: 'Montserrat';
+        border-radius: 2.5px;
+        border-color: #000a;
+        border-style: inset;
+        position: relative;
+    };
+}

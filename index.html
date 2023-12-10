@@ -29,6 +29,25 @@
         </titlebar>
         <input id="mathscriptuserinput" placeholder="enter a mathscript expression">
         <mathcontainer><math></math></mathcontainer>
+        <article>
+            <heading>mathscript</heading>
+            <br>
+            <span>mathscript is a javascript library for converting simple mathscript expressions into MathML HTML elements.</span>
+            <hr>
+            <small>this is originally a school project for maths class, and it is going to be far from perfect for a long time. i will try to keep maintaining this script, but i cannot guarantee updates until the end of time :) thanks for understanding!</small>
+            <h1>how to use</h1>
+            <hr>
+            <span>you can use the input box above to enter mathscript expressions, and the result will be shown below. it is that simple! but, here are some basics.<br>you may use:</span>
+            <ul>
+                <li>numbers from 0 to 9</li>
+                <li>lowercase letters from a to z for variables</li>
+                <li>operators <kbd>+</kbd> <kbd>-</kbd> <kbd>*</kbd> (or <kbd>×</kbd>) and <kbd>/</kbd> (or <kbd>÷</kbd>)</li>
+                <li>multi-level brackets <kbd>(</kbd> &amp; <kbd>)</kbd></li>
+                <li>fractions in the <code>FRAC{TOP EXPRESSION:FRAC:BOTTOM EXPRESSION}FRAC</code> format: <code>FRAC{x:FRAC:2}FRAC</code> for <math><mfrac><mrow><mi>x</mi></mrow><mrow><mn>2</mn></mrow></mfrac></math></li>
+                <li>powers in the <code>POW{EXPRESSION:POW:EXPONENT}POW</code> format: <code>POW{x:POW:2}POW</code> for <math><msup><mi>x</mi><mn>2</mn></msup></math></li>
+                <li>roots in the <code>ROOT{BASE:ROOT:NUMBER}ROOT</code> format: <code>ROOT{3:ROOT:125}ROOT</code> for <math><mroot><mrow><mn>125</mn></mrow><mrow><mn>3</mn></mrow></mroot></math></li>
+            </ul>
+        </article>
     </body>
     <script src="https://cdn.jsdelivr.net/gh/RichardKanshen/mathscript/mathscript.js"></script>
     <script src="/mathscript/index.js"></script>
