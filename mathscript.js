@@ -13,6 +13,7 @@ const MathScript = {
     
         var result = input.valueOf()
             .replaceAll("/", "÷").replaceAll("*", "×")
+            .replaceAll("\\n", '<mspace linebreak="newline" />')
             .replaceAll(/[a-z]/g, match => `<mi>${match}</mi>`)
             .replaceAll("FRAC{", "<mfrac><mrow>") //   FRACTIONS
             .replaceAll(":FRAC:", "</mrow><mrow>") //  FRACTIONS
