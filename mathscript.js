@@ -13,7 +13,7 @@ const MathScript = {
     
         var result = input.valueOf()
             .replaceAll("/", "÷").replaceAll("*", "×")
-            .replaceAll("\\n", '<mspace linebreak="newline" />')
+            .replaceAll("\\n", '###NEWLINE###')
             .replaceAll(/[a-z]/g, match => `<mi>${match}</mi>`)
             .replaceAll("FRAC{", "<mfrac><mrow>") //   FRACTIONS
             .replaceAll(":FRAC:", "</mrow><mrow>") //  FRACTIONS
@@ -29,7 +29,8 @@ const MathScript = {
                 bracketsCount--;
                 return '<mo>)</mo></mrow>';
             })
-            .replace(/\d+(\.\d+)?/g, match => `<mn>${match}</mn>`);
+            .replace(/\d+(\.\d+)?/g, match => `<mn>${match}</mn>`)
+            .replaceAll("###NEWLINE###", '<mspace linebreak="newline" />');
             
 
         
