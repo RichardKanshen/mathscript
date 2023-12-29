@@ -30,7 +30,7 @@ const MathScript = {
                 return '<mo>)</mo></mrow>';
             })
             .replace(/\d+(\.\d+)?/g, match => `<mn>${match}</mn>`)
-            .replaceAll("###NEWLINE###", '<mspace linebreak="newline" />');
+            .replaceAll("###NEWLINE###", '</math><br><math>');
             
 
         
