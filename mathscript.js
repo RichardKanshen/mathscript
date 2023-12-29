@@ -20,6 +20,7 @@ const MathScript = {
             .replaceAll("}FRAC", "</mrow></mfrac>") // FRACTIONS
             .replaceAll(/ROOT{([^:]+):ROOT:([^}]+)}ROOT/g, '<mroot><mrow>$2</mrow><mrow>$1</mrow></mroot>') // ROOT EXPRESSIONS
             .replaceAll(/POW{([^:]+):POW:([^}]+)}POW/g, '<msup><mi>$1</mi><mn>$2</mn></msup>') //              POWER EXPRESSIONS
+            .replaceAll("π", "<mi>π</mi>").replaceAll("PI", "<mi>π</mi>")
             .replaceAll(/([+\-=÷×])/g, operator => operators[operator] || operator)
             .replace(/[(]/g, () => {
                 bracketsCount++;
